@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+	<a href="/cart/" class="cart_button">
+		<img src="/static/design/img/cart.png" alt="cart image">
+		<!-- <span class="cart_count" style="color: red;">{{ cart_count }}</span> -->
+	</a>
+	<div class="content">
+		<div class="container_home__block">
+			{% for item in products %}
+			<div class="block__item">
+				<div class="item__content">
+					<img src="/media/{{ item.get_images.0.image }}" alt="image">
+					<p style="font-weight: bold;">{{ item.name }}</p>
+					<p>
+						{{ item.description }}
+					</p>
+					<p>{{ item.price }} €</p>
+					<p class="add_to_cart" onclick="addToCart('{{ item.id }}');">buy</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}

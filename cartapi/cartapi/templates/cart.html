@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Cart{% endblock %}
+{% block content %}
+<div class="wrapper">
+	<div class="content">
+		{% for item in cart_item %}
+		<div class="content__item ">
+			<div class="item__info">
+				<div class="info__img">
+					<img src="{% if item.product.get_images %}/media/{{ item.product.get_images.0.image }}{% endif%}" alt="{{ item.product.name }}">
+				</div>
+				<div class="info__content">
+					<h2>{{ item.product.name }}</h2>
+					<p>
+						{{ item.product.description }}
+					</p>
+				</div>
+			</div>
+			<div class="item__options">
+				<p class="delete_item" onclick="deleteItemCart('{{ item.product.id }}', this);"><img src="/static/design/img/waste.png" alt="waste"></p>
+				<div class="options__block">
+					<div>
+						<button class="minus_count" onclick="editCount('{{ item.product.id }}', 'minus', '{{ item.product.price }}',this);"><img src="/static/design/img/minus.png" alt="minus"></button>
+						<input class="cart_count" type='text' value="{{ item.count }}">
+						<button class="plus_count" onclick="editCount('{{ item.product.id }}', 'plus', '{{ item.product.price }}', this);"><img src="/static/design/img/plus.png" alt="plus"></button>
+					</div>
+					<span class="price"><span>{{ item.price }}</span> <span>€</span></span>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+		<div class="content__total">
+			<p class="total__price"><span class="total__allprice">{{ allprice }}</span> €</p>
+			<a href="/shipping/" class="total_button {% if not cart_item %}total_button_disabled{% endif %}">buy</a>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Shipping{% endblock %}
+{% block content %}
+	<div class="wrapper">
+		<div class="shippingcontent">
+			<div class="form">
+				<form class="checkout-form" role="form" method="POST">
+					{% csrf_token %}
+					<div class="form__item">
+						<p>Name*</p>
+						{{ form.name }}
+					</div>
+					<p class="name_error error_label">name is too short</p>
+					
+					<div class="form__item">
+						<p>Adress*</p>
+						{{ form.address }}
+					</div>
+					<p class="address_error error_label">address is too short</p>
+					
+					<div class="form__item">
+						<p>Phone</p>
+						{{ form.phone }}
+					</div>
+					<p class="phone_error error_label">invalid phone</p>
+
+					<div class="form__item">
+						<p>E-mail</p>
+						{{ form.email }}
+					</div>
+					<p class="email_error error_label">invalid e-mail</p>
+
+					<div class="form__item" style="position: relative;">
+						<p>Shipping options</p>
+						{{ form.shipping_options }}
+						<div class="hidden_select" style="display: none;"></div>
+					</div>
+					<input id='allprice' type="text" value="{{ allprice }}" style="display: none;">
+					<p class="shipping_allprice"><span class="allprice">{{ allprice }}</span><span> €</span></p>
+					<button type="submit" disabled="disabled" class="submit_button submit_button_disabled">pay</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="delivery_data" style="display: none;">
+		<input type="text" class="default_delivery" value="{{ default_delivery }}">
+		<input type="text" class="more_delivery" value="{{ more_delivery }}">
+		{% for i in delivery %}
+		<input type="text" class="delivery__{{ i.id }}" value="{{ i.price }}">
+		{% endfor %}
+	</div>
+{% endblock %}

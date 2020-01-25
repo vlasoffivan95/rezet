@@ -1,0 +1,273 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.info__img{
+    width: 30%;
+    margin: 20px;
+    box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+    border-radius: 6px;	
+    padding: 10px;
+    height: fit-content;
+}
+
+.content{
+	padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.info__img img{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.content{
+	width: 900px;
+	margin: 0 auto;
+        padding: 0 20px;
+}
+
+.item__info{
+	display: flex;
+	width: 70%;
+    border-right: 1px solid #CDCDCD;
+}
+
+.content__item{
+	display: flex;
+	padding: 20px 10px 40px 10px;
+	border-bottom: 1px solid #CDCDCD;
+	justify-content: space-evenly;
+}
+
+.info__content h2{
+	font-size: 16px;
+}
+
+.info__content{
+	padding: 10px;
+}
+
+.info__content p{
+	font-size: 14px;
+}
+
+.options__block{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20%;
+}
+
+.options__block div{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.options__block input{
+	height: fit-content;
+    border: none;
+    width: 25px;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: grey;
+}
+
+.minus_count img{
+	width: 100%;
+}
+
+.plus_count img{
+	width: 100%;
+}
+
+.minus_count, .plus_count{
+	width: 25px;
+    border: 1px solid #CDCDCD;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 2px;
+    cursor: pointer;
+}
+
+.price{
+	font-size: 14px;
+}
+
+.item__options{
+	width: 30%;
+	position: relative;
+	padding-left: 25px;s
+}
+
+.delete_item img{
+	width: 100%;
+}
+
+.delete_item{
+	width: 18px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    cursor: pointer;
+}
+
+.total__price{
+	font-size: 28px;
+    padding: 20px 0px;
+}
+
+.content__total{
+	text-align: right;
+}
+
+.total_button{
+	color: grey;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid grey;
+    padding: 5px 40px;
+    background: #fff;
+}
+
+.total_button_disabled{
+    background: #CDCDCD;
+    pointer-events: none;
+}
+
+.shippingcontent{
+	padding-top: 50px;
+    padding-bottom: 50px;
+    width: 500px;
+	margin: 0 auto;
+	padding-left: 20px;
+    padding-right: 20px;
+}
+
+.form__item{
+	display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.form__item label{
+	font-size: 20px;
+    font-weight: bold;
+}
+
+.form__item input{
+    width: 60%;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #CDCDCD;
+}
+
+.input_error{
+    border-color: red!important;
+}
+
+.form__item select{
+    width: 66%;
+    padding: 6px 10px;
+}
+
+.form{
+	width: 80%;
+    margin: 0 auto;
+}
+
+.submit_button{
+	display: inline-block;
+    float: right;
+    border: 1px solid #CDCDCD;
+    color: #CDCDCD;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.submit_button_disabled{
+    background: #F2F2F2;
+}
+
+.form__item input:focus{
+    outline-width: 0px;
+}
+
+.error_label{
+    color: red;
+    font-size: 14px;
+    margin-left: 138px;
+    margin-top: 7px;
+    display: none;
+}
+
+.form__item select{
+    display: inline-block;
+    height: 27px;
+    line-height: 30px;
+    position: relative;
+    background: #fff;
+    border: 1px solid #CDCDCD;
+} 
+
+.cart_button{
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    position: absolute;
+    color: #000;
+    text-decoration: none;
+    text-align: right;
+}
+
+.cart_button img{
+    width: 10%;
+}
+
+.add_to_cart{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.item__content p{
+    margin: 10px
+}
+
+.item__content img{
+    width: 150px;
+}
+
+.item__content{
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.container_home__block{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.block__item{
+    width: 50%;
+}
+
+.shipping_allprice{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.hidden_select{
+    position: absolute;
+    width: 66%;
+    height: 100%;
+    right: 0;
+}
